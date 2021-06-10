@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <title>npm</title> 
+  <script src="./js/slider_vanilla.js"></script>   
+  <link rel="stylesheet" type="text/css" href="css/slider.css"/>  
+ </head>
+ <body> 
+    <div id="slider" class="slider"></div> 
+    <div id="slider_second"class="slider"></div> 
+  
+    <script>
+        const el = document.querySelector(`#slider`)
+        const slider = new Slider(el, {
+             effect:"slider",
+             auto: false,
+             autoSpeed: 1000,
+             speed: .9, 
+             nextPrevBtns: "always",
+             src:[
+                "./images/0.png","./images/1.png"
+                ,"./images/2.png","./images/3.png"
+                ,"./images/4.png","./images/5.png"
+                ,"./images/6.png" 
+             ],
+             autoHover:false,
+             width: 500,
+             height: 300,
+        });
+        
+        const el2 = document.querySelector(`#slider_second`)
+        const slider2 = new Slider(el2, {
+             effect:"fadeOut",
+             auto: false,
+             autoSpeed: 1000,
+             speed:.6,
+             nextPrevBtns: "hoverSlide",
+          src:[
+               "./images/3.png","./images/1.png",
+               "./images/2.png","./images/6.png",
+               "./images/4.png","./images/5.png"
+          ],
+             width: 800, 
+        });
+    </script>
+ </body>
+</html>
